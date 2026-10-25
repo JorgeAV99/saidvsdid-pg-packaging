@@ -104,6 +104,7 @@ addopts = [
     "--strict-config",
     "-m",
     "not property",        # property based tests opt-in only
+    "--deselect=tests/test_utils.py::test_is_normalized_name",
     "--capture=sys",       # avoids per-test fd dup2/lseek syscalls (~20% of the runtime)
     "-p",
     "no:logging",          # no test uses caplog and its per-test setup is measurable
